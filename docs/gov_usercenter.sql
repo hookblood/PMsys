@@ -1,4 +1,4 @@
-﻿/*
+/*
 SQLyog Trial v12.01 (64 bit)
 MySQL - 5.5.28 : Database - gov_usercenter
 *********************************************************************
@@ -109,6 +109,7 @@ CREATE TABLE `user_module` (
   `mod_id` int(5) NOT NULL AUTO_INCREMENT COMMENT '模块id',
   `mod_name` varchar(50) DEFAULT NULL COMMENT '模块名字',
   `mod_token` varchar(50) DEFAULT NULL COMMENT '模块特征码',
+  `mod_url` varchar(255) DEFAULT NULL COMMENT '模块超链接',
   `state` int(1) DEFAULT NULL COMMENT '（0禁止，1开放）',
   PRIMARY KEY (`mod_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户模块表';

@@ -1,4 +1,4 @@
-﻿/*
+/*
 SQLyog Trial v12.01 (64 bit)
 MySQL - 5.5.28 : Database - gov_tenderinformation
 *********************************************************************
@@ -167,12 +167,12 @@ CREATE TABLE `gg_dic` (
   `id` int(5) NOT NULL AUTO_INCREMENT COMMENT '编号',
   `gg_type` varchar(50) DEFAULT NULL COMMENT '公告类型',
   `gg_table` varchar(20) DEFAULT NULL COMMENT '公告类型表',
-  PRIMARY KEY (`gg_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='类型字典';
 
 /*Data for the table `gg_dic` */
 
-insert  into `gg_dic`(`gg_id`,`gg_type`,`gg_table`) values (1,'竞争性谈判采购公告','gg_jzxtpcg'),(2,'采购公告','gg_cg'),(3,'询价采购公告','gg_xj'),(4,'竞争性磋商采购公告','gg_cscg'),(5,'征求意见公告','gg_zqyj'),(6,'更正公告','gg_gz'),(7,'竞争性谈判结果公告','gg_tpjg'),(8,'竞争性磋商结果公告','gg_csjg'),(9,'询价结果公告','gg_xjjg'),(10,'结果公告','gg_jg');
+insert  into `gg_dic`(`id`,`gg_type`,`gg_table`) values (1,'竞争性谈判采购公告','gg_jzxtpcg'),(2,'采购公告','gg_cg'),(3,'询价采购公告','gg_xj'),(4,'竞争性磋商采购公告','gg_cscg'),(5,'征求意见公告','gg_zqyj'),(6,'更正公告','gg_gz'),(7,'竞争性谈判结果公告','gg_tpjg'),(8,'竞争性磋商结果公告','gg_csjg'),(9,'询价结果公告','gg_xjjg'),(10,'结果公告','gg_jg');
 
 /*Table structure for table `gg_gz` */
 

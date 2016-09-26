@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRM管理后台</title>
+
+<link rel="stylesheet" href="__PUBLIC__/index/css/index.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/index/js/tendina.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/index/js/common.js"></script>
+
+</head>
+<body>
+    <!--顶部-->
+    <div class="top">
+            <div style="float: left"><span style="font-size: 16px;line-height: 45px;padding-left: 20px;color: #fff">CRM管理中心</h1></span></div>
+            <div id="ad_setting" class="ad_setting">
+                <a class="ad_setting_a" href="javascript:; ">{$_SESSION.hu_name}</a>
+                <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">
+                   <a href="index.php?c=index&a=center" style="color: #000000;text-decoration: none;"> <li class="ad_setting_ul_li"><i class="icon-user glyph-icon"></i>个人中心</li></a>
+                    <li class="ad_setting_ul_li"><a href=""><i class="icon-cog glyph-icon"></i>设置</a></li>
+                    <a href="index.php?c=index&a=login_out" style="color: #000000;text-decoration: none;"><li class="ad_setting_ul_li"> <i class="icon-signout glyph-icon"></i> <span class="font-bold">退出</span>  </li></a>
+                </ul>
+                <img class="use_xl" src="__PUBLIC__/index/images/right_menu.png" />
+            </div>
+    </div>
+    <!--顶部结束-->
+    <!--菜单-->
+    <div class="left-menu">
+        <ul id="menu">
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>地区数据管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="index.php?c=index&a=area_manage"><i class="glyph-icon icon-chevron-right1"></i>地区管理</a></li>
+                    <li><a href="index.php?c=index&a=org_manage"><i class="glyph-icon icon-chevron-right2"></i>组织机构管理</a></li>
+                    <li><a href="index.php?c=index&a=pro_manage"><i class="glyph-icon icon-chevron-right3"></i>项目管理</a></li>
+                    <li><a href="index.php?c=index&a=xiugai_manage"><i class="glyph-icon icon-chevron-right3"></i>招投标信息管理</a></li>
+                    <!-- <li><a href="我的微网站.html"><i class="glyph-icon icon-chevron-right3"></i>我的微网站</a></li> -->
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>人员数据管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="index.php?c=index&a=people_manage"><i class="glyph-icon icon-chevron-right1"></i>人员资料管理</a></li>
+                    <li><a href="index.php?c=index&a=admin_manage"><i class="glyph-icon icon-chevron-right2"></i>管理员账号</a></li>
+                    <!-- <li><a href="我的微网站.html"><i class="glyph-icon icon-chevron-right3"></i>我的微网站</a></li> -->
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!--菜单右边的iframe页面-->
+    <!-- <div id="right-content" class="right-content">
+        <div class="content">
+            <div id="page_content">
+                <iframe id="menuFrame" name="menuFrame" src="index.php?c=index&a=area_manage" style="overflow:visible;"
+                        scrolling="yes" frameborder="no" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div> -->
+<script type="text/javascript">
+    function loginOut(){
+        window.location.href="index.php?c=index&a=logo";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+.w200{
+	width: 200px;
+}
+.roomlist li .roompic {
+    margin-right: 5px;width: 90px;height: 120px;
+}
+.w50{
+	width: 50%;
+}
+.mar-b10{
+	margin-bottom: 10px;
+}
+.mar-t10{
+	margin-top: 10px;
+}
+.d-b{
+	display: block;
+}

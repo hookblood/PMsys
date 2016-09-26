@@ -27,9 +27,8 @@
 
         
 <div class="container width80 pt20">
-
-<!--{$_COOKIE.user_id}-->
-<form method="post" action="{:U('Index/index')}">
+    {$_COOKIE.username}
+ <form method="post" action="{:U('Index/index')}">
     <div class="control-group">
         <input name="UserName" type="text" value="{$_COOKIE.username}"  class="input width100 " style="background: none repeat scroll 0 0 #F9F9F9;padding: 8px 0px 8px 5px;" placeholder="请输入用户名" />
     </div>

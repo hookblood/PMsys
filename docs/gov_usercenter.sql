@@ -1,4 +1,4 @@
-/*
+﻿/*
 SQLyog Trial v12.01 (64 bit)
 MySQL - 5.5.28 : Database - gov_usercenter
 *********************************************************************
@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `admin_user`;
 CREATE TABLE `admin_user` (
   `uid` int(5) NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `alias` varchar(20) DEFAULT NULL COMMENT '登录名',
-  `upassword` varchar(20) DEFAULT NULL COMMENT '密码',
+  `upassword` varchar(50) DEFAULT NULL COMMENT '密码',
   `uname` varchar(50) DEFAULT NULL COMMENT '真实姓名',
   `salt` varchar(2) DEFAULT NULL COMMENT '盐位码',
   `phone` varchar(50) DEFAULT NULL COMMENT '电话',

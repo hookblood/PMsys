@@ -18,6 +18,12 @@ class IndexModel extends BaseModel {
 
     public function getPrivileges($where){
         $info=$this->where($where)->find();
+        if($info){
+            $condition['s_uid']=$info['uid'];
+            $condition['expiry_time']=time()+86400*7;
+            $condition['session_id']=$info['uid'];
+            M('session')->add($condition);
+        }
         return  $info;
 //        return $privileges;
     }
@@ -66,6 +72,5 @@ class IndexModel extends BaseModel {
             $info=M('session')->where("s_uid=$where")->delete();
             return  $info;
         }
-
     }
 }

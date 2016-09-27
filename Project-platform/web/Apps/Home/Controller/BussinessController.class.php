@@ -20,10 +20,22 @@ class BussinessController extends BaseController {
 	 * 
 	 */
     public function get_pmlist(){
-        //后台服务调用
-//        $res=$this->Yar->managerInterface('1');
-//        $res=$this->Yar->login(I('post.UserName'),md5(I('post.Password')));
-//            return $res;
-            $this->display('bussiness/bussiness_list');
+        //获取
+        $list = $this->Yar->managerlist_Interface(1);
+        $this->assign('list',$list);
+//        var_dump($list);
+        $this->display('bussiness/bussiness_list');
         }
+    /**
+     * 获取商务经理的项目列表
+     *
+     */
+    public function get_projectlist($pmid){
+        //获取
+        $list = $this->Business_Yar->get_projectlist($pmid);
+        $this->assign('list',$list);
+        $this->assign('uid',$_COOKIE['user_id']);
+//        var_dump($list);
+        $this->display('bussiness/project_list');
+    }
     }

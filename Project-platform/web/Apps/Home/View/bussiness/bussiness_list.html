@@ -52,8 +52,8 @@
                         <div class="radius50 color3 radiusStyle fl text_center transformXY">
                         {$count[$info['uid']]['project_sum']}</div>
                         </if>
-                        {$info.uname}
-                        <a href='index.php?c=Bussiness&a=project_list&uid={$info[uid]}&areaid={$areaid}' title='' class='glyphicon glyphicon-chevron-right fr color1 transform50'>
+                        {$info.alias}
+                        <a href='index.php?s=/Home/Bussiness/get_projectlist&pmid={$info.uid}' title='' class='glyphicon glyphicon-chevron-right fr color1 transform50'>
                         </a>
                     </li>
                 </volist>
@@ -63,7 +63,7 @@
                     <li style="width:100%;padding: 10px 0px;background-color:#ffffff;list-style: none;text-align: center;color: #808080">{$name}暂时没有数据</li>
                 </if>
     </div><br>
-    <div class="page" style="position:fixed;bottom:0px;"> {$pages}</div>
+    <!--<div class="page" style="position:fixed;bottom:0px;"> {$pages}</div>-->
 </div>
 
 <script type="text/javascript">

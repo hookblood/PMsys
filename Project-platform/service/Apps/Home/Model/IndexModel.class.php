@@ -73,4 +73,23 @@ class IndexModel extends BaseModel {
             return  $info;
         }
     }
+    /**
+     * 经理人员接口
+     *
+     */
+    public function managerInterface($mid){
+        $uid=$_COOKIE['user_id'];
+        $condition['role_id']=array('like',"%$uid%");
+        $info=M('admin_user as a')->join('user_role_relation as b on a.uid=b.uid')->where($condition)->select();
+        if($info){
+            if($mid==1){
+                return M('admin_user')->where('state=2')->select();
+            }elseif($mid==2){
+                return M('admin_user')->where('state=3')->select();
+            }
+        }else{
+            return $_COOKIE['username'];
+        }
+    }
+
 }

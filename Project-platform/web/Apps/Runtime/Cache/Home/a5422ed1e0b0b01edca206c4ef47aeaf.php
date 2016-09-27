@@ -1,0 +1,98 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRM-登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<link href="/Public/index/css/bootstrap-2.3.2.min.css" rel="stylesheet" />
+<link href="/Public/index/css/NewGlobal.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Public/index/layer/skin/layer.css" />
+    <link href="/Public/index/css/index.css" rel="stylesheet" />
+
+    <script language="javascript" type="text/javascript" src="/Public/index/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/index/js/zepto.js"></script>
+    <script type="text/javascript" src="/Public/index/layer/layer.js"></script>
+
+</head>
+<body>
+ <div class="header">
+
+<div class="title" id="titleString">登陆</div>
+<!--<a href="javascript:history.go(-1);" class="back">-->
+            <!--<span class="header-icon header-icon-return"></span>-->
+            <!--<span class="header-name">返回</span>-->
+</a>
+ </div>
+
+        
+<div class="container width80 pt20">
+    <?php echo ($_COOKIE["username"]); ?>
+<!-- <form method="post" action="<?php echo U('Index/index');?>">-->
+ <form method="post" action="index.php?s=Home/Index/index">
+    <div class="control-group">
+        <input name="UserName" type="text" value="<?php echo ($_COOKIE["username"]); ?>"  class="input width100 " style="background: none repeat scroll 0 0 #F9F9F9;padding: 8px 0px 8px 5px;" placeholder="请输入用户名" />
+    </div>
+    <div class="control-group">
+        <input name="Password" type="password"  value="<?php echo ($_COOKIE["password"]); ?>"   class="width100 input" style="background: none repeat scroll 0 0 #F9F9F9;padding: 8px 0px 8px 5px" placeholder="请输入密码" />
+    </div>
+    <button type="submit" id="ctl00_ContentPlaceHolder1_btnOK" class="btn-large green button width100">立即登陆</button>
+</form>
+    <a href="<?php echo U('Index/register');?>">立即注册</a>
+
+</div>
+
+
+  <div class="footer">
+  </div>
+
+
+<script type="text/javascript">
+    function login(){
+//        alert(111);
+        if(jQuery("#username").val()=="" || jQuery("#password").val()==""){
+            layer.msg("用户名和密码不能为空！");
+        }else{
+            //遮罩
+//            var index= layer.load(2);
+            jQuery.ajax({
+                type:'POST',
+                url: 'index.php?c=Login&a=login_action_show',
+                datatype:'JSON',
+                data:"u_name="+jQuery("#username").val()+"&u_pwd="+jQuery("#password").val(),
+                success:function(data){
+//                    console.log(data);
+                    result=JSON.parse(data);
+                       if(result.error==1){
+                           alert("用户名或密码错误");
+                       }else if(result.error==2){
+                            var url = 'index.php?c=Showphone&a=index';
+                           location.href = url;
+                       }
+
+//                    alert(data);
+//                    result=JSON.parse(data);
+//                    if(result.error>0){
+//                        layer.msg(result.message);
+//                        $("#loading").html("");
+//                        $("#loginBtn").attr("disabled",false);
+//                    }
+//                    else{
+//                        var url = 'index.php?c=Showphone&a=index';
+//                        location.href = url;
+//                    }
+                    //关闭遮罩
+//                    layer.close(index);
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+//                    alert(errorThrown);
+                    $("#loading").html("");
+                    $("#loginBtn").attr("disabled",false);
+                    layer.close(index);
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

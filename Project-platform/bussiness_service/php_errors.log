@@ -1,0 +1,26 @@
+[12-Sep-2016 15:49:00 PRC] PHP Fatal error:  Call to a member function get_friend_link() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 751
+[14-Sep-2016 14:18:08 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:18:38 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:19:35 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:21:16 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:21:22 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:22:02 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:22:05 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:22:11 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:23:41 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:24:45 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[14-Sep-2016 14:25:51 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Home\Model\IndexModel.class.php on line 42
+[18-Sep-2016 15:36:39 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 15:37:12 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 15:37:18 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 15:37:20 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 15:37:48 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 15:38:33 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getArticleInfo() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 546
+[18-Sep-2016 19:53:47 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getCatLink() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 621
+[18-Sep-2016 19:54:14 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getCatLink() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 621
+[18-Sep-2016 19:54:18 PRC] PHP Fatal error:  Cannot redeclare Home\Controller\IndexController::getCatLink() in E:\wamp\zendwork\gjc_service\Apps\Home\Controller\IndexController.class.php on line 621
+[19-Sep-2016 14:11:18 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Admin\Model\ArticlesModel.class.php on line 180
+[19-Sep-2016 14:12:23 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Admin\Model\ArticlesModel.class.php on line 180
+[19-Sep-2016 14:14:03 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Admin\Model\ArticlesModel.class.php on line 180
+[19-Sep-2016 14:15:14 PRC] PHP Fatal error:  Call to a member function query() on a non-object in E:\wamp\zendwork\gjc_service\Apps\Admin\Model\ArticlesModel.class.php on line 180
+[19-Sep-2016 19:17:10 PRC] PHP Parse error:  syntax error, unexpected 'article_title' (T_STRING) in E:\wamp\zendwork\gjc_service\Apps\Admin\Model\ArticlesModel.class.php on line 13

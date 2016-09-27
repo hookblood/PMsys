@@ -6,6 +6,7 @@ use Gjc\YarClient;
 
 class BaseController extends Controller {
     public $Yar = null;
+    public $Business_Yar = null;
     public function __construct(){
         parent::__construct();
         $this->_initialize();
@@ -15,6 +16,7 @@ class BaseController extends Controller {
      */
     function _initialize() {
         $this->Yar  = YarClient::get_instance ();
+        $this->Business_Yar  = YarClient::get_instance_bussiness();
         $new=$this->Yar->newadd($_COOKIE['username']);
         $res=$this->Yar->newshow($_COOKIE['username']);
 //        dump($res);dump($new);die();

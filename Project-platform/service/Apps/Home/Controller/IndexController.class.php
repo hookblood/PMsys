@@ -10,7 +10,8 @@ class IndexController extends BaseController {
     /**
      * 登陆
      *
-     */    public function login($username,$password)
+     */
+    public function login($username,$password)
     {
         if(!$username)
             return '用户名不能为空！';
@@ -22,22 +23,15 @@ class IndexController extends BaseController {
         return $check=D('Index')->getDiction();
     }
     /**
-     * 退出登陆
-     *
-     */
-    public function loginout(){
-        return setcookie("user_id", "", time()-3600).setcookie("username", "", time()-3600).setcookie("password", "", time()-3600);
-    }
-    /**
      * 获取权限
      *
      */
     public function diction($username){
-        $check=D('Index')->getdiction(array('d.alias'=>$username));
+        $check=D('Index')->getDiction(array('d.alias'=>$username));
         return $check;
     }
     /**
-     * 首页登陆
+     * 新增和验证session数据
      *
      */
     public function newadd($uid){

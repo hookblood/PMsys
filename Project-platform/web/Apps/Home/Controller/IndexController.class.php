@@ -90,6 +90,7 @@ class IndexController extends BaseController {
         setcookie("user_id", "", time()-3600);
         setcookie("username", "", time()-3600);
         setcookie("password", "", time()-3600);
+		$info=$this->Yar->sign_Out($_COOKIE['user_id']);
         $this->display('user/login');
     }
 }

@@ -39,22 +39,22 @@ class IndexModel extends BaseModel {
      * Enter description here ...
      */
     public function NewAdd($where){
-        $info=M('session as a')->join('admin_user as b on a.s_uid=b.uid')->where("b.alias='$where'")->find();
-        if($info){
-            if($info['expiry_time']>time()){
-                return  true;
-            }else{
-                setcookie("user_id", "", time()-3600);
-                setcookie("username", "", time()-3600);
-                setcookie("password", "", time()-3600);
-                return  false;
+        if($_COOKIE['username']==$where){
+//            M('session')->where("s_uid=$where")->delete();
+            $info=M('session as a')->join('admin_user as b on a.s_uid=b.uid')->where("b.alias='$where'")->find();
+            if($info){
+                if($info['expiry_time']>time()){
+                    return  true;
+                }else{
+                    setcookie("user_id", "", time()-3600);
+                    setcookie("username", "", time()-3600);
+                    setcookie("password", "", time()-3600);
+                    return  false;
+                }
             }
-        }else{
-            $condition['s_uid']=$where;
-            $condition['expiry_time']=time()+86400*7;
-            $condition['session_id']=$where;
-            M('session')->add($condition);
-            return 11;
+            else{
+                return false;
+            }
         }
     }
     /**

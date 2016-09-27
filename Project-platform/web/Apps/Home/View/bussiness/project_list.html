@@ -47,9 +47,7 @@
         </a>
  </div>
 <div class="container width80 pt20 ">
-    <if condition="$_SESSION['uid'] eq $uid">
     <button class="btn btn-success" id="addPro">+新增项目</button>
-    </if>
   <div class="control-group width100 clr">
       <ul class="unstyled hotellist1 news_list">
           <if condition="$list">
@@ -58,7 +56,7 @@
                       <if condition="($count[$info['jid']]['project_sum']) and ($_SESSION.state eq 1 OR $_SESSION[state] eq 5)">
                           <div class="radius50  color3 radiusStyle fl text_center transformXY">{$count[$info['jid']]['project_sum']}</div>
                       </if>
-                      <div>{$info[jname]}</div>
+                      <div>{$info[did]}{$info[did]}</div>
                       <if condition="$count2[$info['jid']]['county'] eq ''">
                           <else/>
                           <span class="color2 font12"> {$count2[$info['jid']]['county']}</span>-
@@ -89,32 +87,6 @@
     });
     $("#addPro").click(function(){
         window.location.href="index.php?c=Bussiness&a=project_add&uid="+{$uid};
-    });
-    $(document).ready(function(){
-        var currPage=parseInt("<?php echo $p;?>");
-        var baseUrl=$(".page a.next").attr("href");
-        baseUrl=baseUrl.replace("&p="+(currPage+1),"&");
-//        alert(baseUrl);
-        currPage=currPage?currPage:1;
-
-        $(".news_list").infinitescroll({
-            navSelector: ".page",    //页面分页元素--本页的导航，意思就是一个可以触发ajax函数的模块
-            nextSelector: ".page a.next", //下页对象必须是一个有href的a
-            itemSelector: ".news_list li" , //选择的是要加载的那一个块
-            animate: false,       //是否加载完成就滚动到新内容处
-            hideNav:false,//默认是插件调用成功后会自动隐藏翻页的标签
-            state:{currPage:currPage},//告诉当前是第几页 默认是第一页
-            path:[baseUrl+"p=", ""],
-            loading: {
-                msgText : '正在为您努力加载，请稍后...',
-                img: "",
-                finishedMsg:"",
-                finished:function(){
-                    $(".page a.num").eq(currPage).addClass("current").siblings(".current").removeClass("current");
-                    currPage++;
-                }
-            }
-        });
     });
 </script>
 

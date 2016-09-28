@@ -1,0 +1,72 @@
+.finance_detail{
+    background-color: #fff;
+    padding-top: 10px;
+    line-height: 35px;
+    padding-bottom: 15px;
+}
+.finance_detail .list{
+    border-bottom: 1px solid #f1f4f5;
+    padding-top: 5px;
+}
+.finance_detail div .span2{
+    color: #a1a1a1;
+}
+.form-c{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #f3f9f6;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.container{
+    min-height: 0px;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+.detail_row{
+    border-bottom: 1px solid #e0dfe3;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.detail_row input{
+    color: #A1A1A1;
+}
+.detail_row select{
+    color: #A1A1A1;
+}
+.row_tit{
+    background-color: #dbefec;
+    font-weight: bold;
+    border-bottom: 1px solid #e0dfe3;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.money_div{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.money_div span{
+    color: red;
+}
+.row_head{
+    font-size: 12px;
+    margin-top: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.row_head input{
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.row_head select{
+    font-size: 12px;
+    color: #A1A1A1;
+    height: 32px;
+}
+#add{
+    background-color: red;
+    color: #fff;
+}

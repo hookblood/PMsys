@@ -54,6 +54,7 @@ class IndexModel extends BaseModel {
         $where['a.jid']=$jid;
         $count=M()->table('__PROJECT_COMMENT__ as a,__DICTIONARY__ as b')
             ->field('b.value AS project_sum,a.cid')
+            ->where('a.typekey=b.key')
             ->where($where)
             ->group('a.cid')
             ->select();
@@ -79,7 +80,7 @@ class IndexModel extends BaseModel {
     public function addReport($id,$content,$uid){
         $condition['cid']=$id;
         $condition['content']=$content;
-        $condition['uid']=$_COOKIE['user_id'];
+        $condition['uid']=$uid;
         $condition['ctime']=time();
         $condition['state']=1;
         $info=M('project_comment_attr')->add($condition);
@@ -97,10 +98,10 @@ class IndexModel extends BaseModel {
      * 报告数据新增
      *$jid=》项目id;$content=>内容；$type=>报告类型
      */
-    public function insertReport($jid,$content,$type){
+    public function insertReport($jid,$content,$type,$uid){
         $condition['jid']=$jid;
         $condition['content']=$content;
-        $condition['uid']=$_COOKIE['user_id'];
+        $condition['uid']=$uid;
         $condition['ctime']=time();
         $condition['typekey']=$type;
         $condition['state']=2;

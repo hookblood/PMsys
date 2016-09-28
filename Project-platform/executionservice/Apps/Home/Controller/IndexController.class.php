@@ -74,8 +74,8 @@ class IndexController extends BaseController {
      * 报告数据新增
      *$jid=》项目id;$content=>内容；$type=>报告类型
      */
-    public function insert_Report($jid,$content,$type){
-        $check=D('Index')->insertReport($jid,$content,$type);
+    public function insert_Report($jid,$content,$type,$uid){
+        $check=D('Index')->insertReport($jid,$content,$type,$uid);
         return  $check;
     }
     /**

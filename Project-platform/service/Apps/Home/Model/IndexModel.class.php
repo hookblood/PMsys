@@ -104,11 +104,8 @@ class IndexModel extends BaseModel {
      *￥uid=》人员id
      */
     public function getExecution($uid){
-////        $where['uid']=array('in',$uid);
-//        $count=M()->table('__ADMIN_USER__')
-//            ->field('alias,uid')
-//            ->select();
         $hello = explode(',',$uid);
+        $list=array();
         for($i=0;$i<count($hello);$i++)
         {
             $where['uid']=$hello[$i];
@@ -116,9 +113,8 @@ class IndexModel extends BaseModel {
                 ->field('alias AS project_sum')
                 ->where($where)
                 ->select();
-            $tmp_count[$hello[$i]]=$count[$i];
+            array_push($list,$count);
         }
-//        unset($count);
-        return   $tmp_count;
+        return   $list;
     }
 }

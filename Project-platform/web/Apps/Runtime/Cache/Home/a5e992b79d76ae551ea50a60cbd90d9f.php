@@ -48,8 +48,8 @@
                         <!--<?php echo ($info[uid]); ?>-->
                         <?php if(($count[$info['uid']]['project_sum']) AND ($_SESSION["state"] == 1 OR $_SESSION["state"] == 5)): ?><div class="radius50 color3 radiusStyle fl text_center transformXY">
                         <?php echo ($count[$info['uid']]['project_sum']); ?></div><?php endif; ?>
-                        <?php echo ($info["uname"]); ?>
-                        <a href='index.php?c=Bussiness&a=project_list&uid=<?php echo ($info[uid]); ?>&areaid=<?php echo ($areaid); ?>' title='' class='glyphicon glyphicon-chevron-right fr color1 transform50'>
+                        <?php echo ($info["alias"]); ?>
+                        <a href='index.php?s=/Home/Bussiness/get_projectlist&pmid=<?php echo ($info["uid"]); ?>' title='' class='glyphicon glyphicon-chevron-right fr color1 transform50'>
                         </a>
                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -57,7 +57,7 @@
                     <?php else: ?>
                     <li style="width:100%;padding: 10px 0px;background-color:#ffffff;list-style: none;text-align: center;color: #808080"><?php echo ($name); ?>暂时没有数据</li><?php endif; ?>
     </div><br>
-    <div class="page" style="position:fixed;bottom:0px;"> <?php echo ($pages); ?></div>
+    <!--<div class="page" style="position:fixed;bottom:0px;"> <?php echo ($pages); ?></div>-->
 </div>
 
 <script type="text/javascript">

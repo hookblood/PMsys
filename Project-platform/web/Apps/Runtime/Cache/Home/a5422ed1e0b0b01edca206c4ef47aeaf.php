@@ -28,7 +28,7 @@
         
 <div class="container width80 pt20">
     <?php echo ($_COOKIE["username"]); ?>
-<!-- <form method="post" action="<?php echo U('Index/index');?>">-->
+<!-- <form method="post" action="<?php echo U('Home/Index/index');?>">-->
  <form method="post" action="index.php?s=Home/Index/index">
     <div class="control-group">
         <input name="UserName" type="text" value="<?php echo ($_COOKIE["username"]); ?>"  class="input width100 " style="background: none repeat scroll 0 0 #F9F9F9;padding: 8px 0px 8px 5px;" placeholder="请输入用户名" />

@@ -190,7 +190,7 @@
                   </if>
                     <a href="index.php?s=/Home/Execution/comment_attr&id={$detailed[cid]}&jid={$id}&type=1&uid={$uid}">
                         <li class="paddtb20 borderb">
-                            {$detailed.uid}
+                            {$execution[$i-1][0].project_sum}
                             <if condition="$execution[uid] eq $detailed[uid]"> {$execution[alias]}</if>
                         ({$type[$detailed[cid]][project_sum]})
                         :<span class="color2 styles">{$detailed.content}</span><span class="fr font12">{:date('Y-m-d H:i:s',$detailed['ctime'])}</span>

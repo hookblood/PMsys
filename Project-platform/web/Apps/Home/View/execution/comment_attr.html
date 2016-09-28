@@ -84,7 +84,7 @@
 
         <if condition="$_COOKIE[user_id] eq $list[uid]">
             <li style="text-align: right">
-                <div class="paddtb10" style="">{$list.uid}：</div>
+                <div class="paddtb10" style="">{$execution[$i-1][0].project_sum}：</div>
             <div class="bg9 padd2">
             <div>
                 {$list.content}
@@ -97,7 +97,7 @@
         <else/>
             <li>
 
-            <div class="paddtb10">{$list.uid}：<input type="hidden" id="myid" value="{$list.uid}"/></div>
+            <div class="paddtb10">{$execution[$i-1][0].project_sum}：<input type="hidden" id="myid" value="{$list.uid}"/></div>
             <div class="bg9 padd2">
                 <div>
                     {$list.content}

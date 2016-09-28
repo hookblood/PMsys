@@ -60,7 +60,7 @@
         </a>
      <div class="title" id="titleString">首页</div>
      <?php if(is_array($privileges)): $i = 0; $__LIST__ = $privileges;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i;?><div class="text_center bg2 color3">
-             <div class="col-xs-12 borders padd55 bg11 height50" onclick="window.location='<?php echo ($info["mod_url"]); ?>'">
+             <div class="col-xs-12 borders padd55 bg11 height50" onclick="window.location='<?php echo ($info["mod_url"]); ?>'" >
                  <!--<?php if(($count2) and ($_SESSION["uid"] == 1)): ?>-->
                  <!--<div class="radius50 posi radiusStyle transformXY1 right0"><?php echo ($count2); ?></div>-->
                  <!--<?php endif; ?>-->

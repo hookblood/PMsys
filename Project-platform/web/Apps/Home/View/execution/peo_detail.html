@@ -187,19 +187,6 @@
     <a onClick="" href="#"><img src="__PUBLIC__/index/images/totop.png" /></a>
 </div>
 <script type="text/javascript">
-//    $(document).ready(function(){
-//        $(".checkin").Checkin();
-//        $(".calendarList li").each(function(){
-//            //获取已签到天数
-//            var jsonDate={"parmas":[{"year":2016,"month":8,"day":11},{"year":2016,"month":8,"day":22},{"year":2016,"month":8,"day":16}]}
-//            var date=Number($(this).html());
-//            for(var i=0;i<jsonDate.parmas.length;i++){
-//                if(date==jsonDate.parmas[i].day){
-//                    $(this).addClass("checked");
-//                }
-//            }
-//        })
-//    })
     $(document).ready(function(){
 //        alert({$list[uid]});
         var myDate = new Date();
@@ -393,23 +380,6 @@ function getData(year,month){
         }
     })
 }
-
-//    function remark(){
-////        alert($("#sele").val());
-//        var index=layer.load(2);
-//        $.ajax({
-//            type:'POST',
-//            url:"index.php?c=Showphone&a=submit_detial",
-//            data:"&id="+{$id}+"&content="+$("#remark_content").val()+"&sele="+$("#sele").val()+"&lid="+{$data[lid]},
-//            success:function(data){
-//                $("#th").html(data);
-//                location.replace(location.href);
-//
-////                layer.msg('添加成功');
-//            }
-//        })
-//        layer.close(index);
-//    }
 </script>
 </body>
 </html>

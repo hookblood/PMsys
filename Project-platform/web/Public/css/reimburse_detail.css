@@ -1,0 +1,97 @@
+.finance_detail{
+    background-color: #fff;
+    padding-top: 10px;
+    line-height: 35px;
+    padding-bottom: 15px;
+}
+.finance_detail .list{
+    border-bottom: 1px solid #f1f4f5;
+    padding-top: 5px;
+}
+.finance_detail div .span2{
+    color: #a1a1a1;
+}
+.del{
+     background-color: red;
+     color: #fff;
+ }
+.del:hover{
+    color: #fff;
+}
+.del:hover{
+    background-color: red;
+    color: #fff;
+}
+#mod{
+    background-color: #0099CC;
+    color: #fff;
+}
+#mod:hover{
+    color:#fff;
+}
+.pass{
+    background-color: red;
+    color: #fff;
+}
+.notpass:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.form-c{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    border-radius: 4px;
+}
+.container{
+    min-height: 0px;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+.detail_row{
+    border-bottom: 1px solid #e0dfe3;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.detail_row span{
+    color: #A1A1A1;
+}
+.detail_row input{
+    color: #A1A1A1;
+}
+.row_tit{
+    background-color: #dbefec;
+    font-weight: bold;
+    border-bottom: 1px solid #e0dfe3;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.row_tit .column{
+    padding-left: 27px;
+    padding-right: 27px;
+}
+.money_div{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.money_div span{
+    color: red;
+}
+.row_head{
+     font-size: 12px;
+     padding-top:10px;
+ }
+.row_head select{
+    height: 32px;
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.row_head .pro{
+    font-size: 12px;
+    color: #A1A1A1;
+}

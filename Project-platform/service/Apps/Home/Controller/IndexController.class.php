@@ -70,8 +70,8 @@ class IndexController extends BaseController {
         return $info;
     }
     /**
-     * 执行的人员详情
-     *$mid=>模块的id
+     * 执行团队的人员
+     *$uid=>人员的id
      */
     public function showPerson($uid){
         $info=D('Index')->getPerson($uid);
@@ -79,7 +79,7 @@ class IndexController extends BaseController {
     }
     /**
      * 项目报告人员
-     *
+     *￥uid=》人员id
      */
     public function pushExecution($uid){
         $info=D('Index')->getExecution($uid);

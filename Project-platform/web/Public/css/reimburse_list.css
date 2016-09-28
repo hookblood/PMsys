@@ -1,0 +1,37 @@
+#add_account{
+    border-radius: 0px;
+    background-color: red;
+    border: none;
+    height: 40px;
+}
+.li{
+    padding-top: 0px;
+}
+.finance_con{
+    border-right: 1px solid #e7e8eb;
+    border-left: 1px solid #e7e8eb;
+}
+.finance_con div .span2{
+    color: #A1A1A1;
+}
+.people{
+    text-align: center;
+    writing-mode: tb;
+    -webkit-transform:translateY(200%);
+    -moz-transform:translateY(200%);
+    -o-transform:translateY(200%);
+    -ms-transform:translateY(200%);
+    transform: translateY(200%);
+    padding-left: 0px;
+    padding-right:3%;
+}
+.num{
+    text-align: center;
+    height: 100%;
+    color: #6ac134;
+    -webkit-transform:translateY(200%);
+    -moz-transform:translateY(200%);
+    -o-transform:translateY(200%);
+    -ms-transform:translateY(200%);
+    transform: translateY(200%);
+}

@@ -37,13 +37,10 @@ class ExecutionController extends BaseController {
         $detailed=$this->Execution_Yar->showDetailed(I('get.id'));
         $type=$this->Execution_Yar->get_Type(I('get.id'));
         $name=$this->Yar->showPerson(I('get.uid'));
-//        $cid="";
         $user="";
             foreach($detailed as $k){
-//                $cid.=$k['cid'].",";
                 $user.=$k['uid'].",";
             }
-//        $cid = rtrim($cid, ',');
         $user = rtrim($user, ',');
         $execution=$this->Yar->pushExecution($user);
         $str="";
@@ -51,13 +48,12 @@ class ExecutionController extends BaseController {
             $str.=$k['uid'].",";
         }
         $str = rtrim($str, ',');
-        dump($execution);
         $info=$this->Yar->showPerson($str);
+        $this->assign('execution',$execution);
         $this->assign('info',$info);
         $this->assign('data',$data);
         $this->assign('login',$name);
         $this->assign('detailed',$detailed);
-        $this->assign('execution',$execution);
         $this->assign('type',$type);
         $this->assign('id',I('get.id'));
         $this->assign('uid',I('get.uid'));
@@ -72,6 +68,14 @@ class ExecutionController extends BaseController {
 
         $info=$this->Yar->showPerson($data[0]['uid']);
         $list=$this->Execution_Yar->get_Report(I('get.id'));
+        $user="";
+        foreach($list as $k){
+            $user.=$k['uid'].",";
+        }
+        $user = rtrim($user, ',');
+        $execution=$this->Yar->pushExecution($user);
+//        dump($execution);
+        $this->assign('execution',$execution);
         $this->assign('list',$list);
         $this->assign('data',$data);
         $this->assign('info',$info);
@@ -90,7 +94,7 @@ class ExecutionController extends BaseController {
      *$jid=》项目id;$content=>内容；$type=>报告类型
      */
     public function detailed_Add(){
-        return $this->Execution_Yar->insert_Report(I('post.id'),I('post.content'),I('post.type'));
+        return $this->Execution_Yar->insert_Report(I('post.id'),I('post.content'),I('post.type'),$_COOKIE['user_id']);
     }
     /**
      * 项目信息修改

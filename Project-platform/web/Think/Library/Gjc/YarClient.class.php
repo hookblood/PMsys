@@ -30,9 +30,27 @@ class YarClient {
      * @param string $c 控制器
      * @return Ambigous <NULL, \Yar_client>
      */
-    public static function &get_instance_bussiness($m='',$c='') {
+//    public static function &get_instance_bussiness($m='',$c='') {
+//        // 获取配置信息
+//        $ServiceUrl = C('BussinessServiceUrl');
+//        if(!empty($m)||!empty($c)){
+//            $ServiceUrl = $ServiceUrl . '/' . $m . '/'. $c;
+//        }
+//        static $obj = null;
+//        if ($obj == null) {
+//            $obj = new \Yar_client($ServiceUrl);
+//        }
+//        return $obj;
+//    }
+    /**
+     * 初始化执行团队服务接口
+     * @param string $m 模块名
+     * @param string $c 控制器
+     * @return Ambigous <NULL, \Yar_client>
+     */
+    public static function &get_execution($m='',$c='') {
         // 获取配置信息
-        $ServiceUrl = C('BussinessServiceUrl');
+        $ServiceUrl = C('ExecutionServiceUrl');
         if(!empty($m)||!empty($c)){
             $ServiceUrl = $ServiceUrl . '/' . $m . '/'. $c;
         }
@@ -42,9 +60,9 @@ class YarClient {
         }
         return $obj;
     }
-    public static function &get_execution($m='',$c='') {
+    public static function &get_reimburse($m='',$c='') {
         // 获取配置信息
-        $ServiceUrl = C('ExecutionUrl');
+        $ServiceUrl = C('ReimburseServiceUrl');
         if(!empty($m)||!empty($c)){
             $ServiceUrl = $ServiceUrl . '/' . $m . '/'. $c;
         }

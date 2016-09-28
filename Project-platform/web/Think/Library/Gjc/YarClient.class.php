@@ -44,7 +44,7 @@ class YarClient {
     }
     public static function &get_execution($m='',$c='') {
         // 获取配置信息
-        $ServiceUrl = C('ExecutionUrl');
+        $ServiceUrl = C('ExecutionServiceUrl');
         if(!empty($m)||!empty($c)){
             $ServiceUrl = $ServiceUrl . '/' . $m . '/'. $c;
         }

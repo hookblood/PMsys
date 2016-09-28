@@ -91,5 +91,34 @@ class IndexModel extends BaseModel {
             return $_COOKIE['username'];
         }
     }
-
+	/**
+     * 执行团队人员详情
+     *$uid=>人员id
+     */
+    public function getPerson($uid){
+        $where['uid']=array('in',$uid);
+        return M('admin_user')->where($where)->select();
+    }
+    /**
+     * 项目报告人员
+     *￥uid=》人员id
+     */
+    public function getExecution($uid){
+////        $where['uid']=array('in',$uid);
+//        $count=M()->table('__ADMIN_USER__')
+//            ->field('alias,uid')
+//            ->select();
+        $hello = explode(',',$uid);
+        for($i=0;$i<count($hello);$i++)
+        {
+            $where['uid']=$hello[$i];
+            $count=M()->table('__ADMIN_USER__')
+                ->field('alias AS project_sum')
+                ->where($where)
+                ->select();
+            $tmp_count[$hello[$i]]=$count[$i];
+        }
+//        unset($count);
+        return   $tmp_count;
+    }
 }

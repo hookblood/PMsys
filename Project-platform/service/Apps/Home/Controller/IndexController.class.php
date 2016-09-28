@@ -53,8 +53,36 @@ class IndexController extends BaseController {
         $check=D('Index')->SignOut($uid);
         return  $check;
     }
+	/**
+     * 商务人员查询
+     *$mid=>模块的id
+     */
     public function managerlist_Interface($mid){
         $info=D('Index')->managerInterface($mid);
+        return $info;
+    }
+	    /**
+     * 执行的人员查询
+     *$mid=>模块的id
+     */
+    public function getUser($mid){
+        $info=D('Index')->managerInterface($mid);
+        return $info;
+    }
+    /**
+     * 执行的人员详情
+     *$mid=>模块的id
+     */
+    public function showPerson($uid){
+        $info=D('Index')->getPerson($uid);
+        return $info;
+    }
+    /**
+     * 项目报告人员
+     *
+     */
+    public function pushExecution($uid){
+        $info=D('Index')->getExecution($uid);
         return $info;
     }
 }

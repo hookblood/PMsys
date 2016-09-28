@@ -24,7 +24,7 @@ class YarClient {
         }
         return $obj;
     }
-    
+
     function __construct() {
         $this->init ();
     }

@@ -23,6 +23,7 @@ class BussinessController extends BaseController {
     public function get_pmlist(){
         //从接口获取数据
         $list = $this->Yar->managerlist_Interface(1);
+        var_dump($list);
         $this->assign('list',$list);
         $this->display('bussiness/bussiness_list');
         }
@@ -44,6 +45,8 @@ class BussinessController extends BaseController {
  */
     public function detail($jid){
         $list = $this->Business_Yar->get_projectdetail($jid);
+        $name = $this->Yar->showPerson($list[0][uid]);
+        var_dump($name);
         $this->assign('list',$list);
         $this->display('bussiness/bussiness_detail');
     }

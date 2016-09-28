@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>详情</title>
+    <title>项目管理-商务详情</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <link href="__PUBLIC__/index/css/bootstrap-3.3.5.min.css" rel="stylesheet" />
@@ -92,7 +92,7 @@
         <span class="header-icon header-icon-home"></span>
         <span class="header-name">主页</span>
     </a>
-    <div class="title" id="titleString">详情</div>
+    <div class="title" id="titleString">商务团队详情</div>
     <a href="index.php?c=Bussiness&a=project_list&uid={$uid}" class="back">
         <span class="header-icon header-icon-return"></span>
         <span class="header-name">返回</span>
@@ -113,20 +113,21 @@
     <button class="btn" style="background-color: red;color: #fff;width: 100%;border-radius: 0px;padding-top: 8px;padding-bottom: 8px" onclick="del()">删除</button>
     <div class="padd2 bg3" style="text-align: left;padding-bottom: 10px;line-height: 40px;">
         <div class="borderb">
-            <span>负责人：</span><span class="color2"><a class="color2" href="index.php?c=Execution&a=peo_detail&uid={$login.uid}&id={$id}">{$login.uname}</a></span>
+            <span>负责人：</span><span class="color2"><a class="color2" href="index.php?s=/Home/Bussiness/get_projectlist&pmid={$info.uid}">{$list[0].uid}(人员名字和跳转需要等待接口和地址)</a></span>
         </div>
         <div class="borderb">
-            <span>负责项目：</span><span class="color2">{$infos[jname]}</span>
+            <span>负责项目：</span><span class="color2">{$list[0].did}(这是地区编码){$list[0].value}</span>
         </div>
         <div class="borderb">
             <span>所属地区：</span><span class="color2">
-            <if condition="$infos[county]">{$infos[county]}-</if>
+            {$list[0].did}(建议取消)
+            <!--<if condition="$infos[county]">{$infos[county]}-</if>
             <if condition="$infos[city]">{$infos[city]}-</if>
-            <if condition="$infos[province]"> {$infos[province]}</if>
+            <if condition="$infos[province]"> {$infos[province]}</if>-->
         </span>
         </div>
         <div class="borderb">
-            <span>团队成员：</span>
+            <span>团队成员：（需要等待接口）</span>
             <volist name="member" id="vo">
             <span class="color2" >
                 <if condition="$vo.yesno eq 2">
@@ -154,7 +155,7 @@
                                 <span class="radius50" style="background-color: #00AA91;color: #fff;display: inline-block;width: 2em;height: 2em;"></span>
                             </div>
                             <div class="col-md-11 col-xs-10 column">
-                                {$info[uname]}：<span class="color2">{$info[comment]}</span>
+                                {$info[uid]}：<span class="color2">{$info[content]}</span>
                                 <div>下一步计划：<if condition="$info[jjfa]">{$info[jjfa]}<else/>暂无</if></div>
                         <span class="fr font12">
                       {:date('Y-m-d H:i:s',$info['ctime'])}</span>
@@ -276,15 +277,16 @@
       if (str == ''||str == null) {
         alert('请输入发布内容');
       }else{
+        var sjid = {$list[0].jid};
         $.ajax({
             type:'POST',
-            url:"index.php?c=Bussiness&a=add_comment",
-            data:{id:"<?php echo $id;?>",content:str,method:$("#text").val()},
+            url:"index.php?s=/Home/Bussiness/addcomment" ,
+            data:{id:"<?php echo $_COOKIE['user_id'];?>",jid:sjid,content:str,method:$("#text").val()},
             dataType:"JSON",
             success:function(data){
-                $(".unstyled").append('<li class="pt1">'+data.hfuid+':'+'<span class="color2">'+data.comment+
+                /*$(".unstyled").append('<li class="pt1">'+data.hfuid+':'+'<span class="color2">'+data.comment+
                   '</span>'+'<span class="fr">'+data.ctime+'</span>'+'</li>');
-                UE.getEditor('editor').setContent('');
+                UE.getEditor('editor').setContent('');*/
                 window.location.reload();
                  // alert('添加成功');
             }
@@ -350,7 +352,8 @@
         layer.confirm("是否确定删除",{
             btn:["删除","取消"]
         },function(){
-            window.location.href="index.php?c=Bussiness&a=people_detail_del&id={$id}";
+            var str = 'index.php?s=/Home/Bussiness/delproject&id='+{$list[0].jid}+'&uid='+{$list[0].uid};
+            window.location.href=str;
         })
     }
 //删除人员

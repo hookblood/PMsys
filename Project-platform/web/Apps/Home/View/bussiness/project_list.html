@@ -5,7 +5,10 @@
 <title>项目列表</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta content="yes" name="apple-mobile-web-app-capable" />
-<link href="__PUBLIC__/index/css/bootstrap-3.3.5.min.css" rel="stylesheet" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+    <link href="__PUBLIC__/index/css/bootstrap-3.3.5.min.css" rel="stylesheet" />
 <link href="__PUBLIC__/index/css/NewGlobal.css" rel="stylesheet" />
 <link href="__PUBLIC__/index/css/index.css" rel="stylesheet" />
     <link href="__PUBLIC__/index/css/dropload.css" rel="stylesheet" />
@@ -56,7 +59,7 @@
                       <if condition="($count[$info['jid']]['project_sum']) and ($_SESSION.state eq 1 OR $_SESSION[state] eq 5)">
                           <div class="radius50  color3 radiusStyle fl text_center transformXY">{$count[$info['jid']]['project_sum']}</div>
                       </if>
-                      <div>{$info[did]}{$info[did]}</div>
+                      <div>{$info[did]}(这是地区编码){$info[value]}</div>
                       <if condition="$count2[$info['jid']]['county'] eq ''">
                           <else/>
                           <span class="color2 font12"> {$count2[$info['jid']]['county']}</span>-
@@ -67,7 +70,7 @@
                       <if condition="$count3">
                            <span class="color2 font12">{$count3[$info['jid']]['province']}</span>
                       </if>
-                      <a href='index.php?c=Bussiness&a=people_detail&jid={$info[jid]}&uid={$uid}' title='' class='glyphicon glyphicon-chevron-right fr color1 transform_50' style="position: absolute;right: 0;top: 50%">
+                      <a href='index.php?s=/Home/Bussiness/detail&jid={$info.jid}' title='' class='glyphicon glyphicon-chevron-right fr color1 transform_50' style="position: absolute;right: 0;top: 50%">
                       </a>
                   </li>
               </volist>
